@@ -1,5 +1,5 @@
 const express = require("express");
-const router = express.Router();
+const router = express();
 const allexercises = require("../apiData/allexercises.json");
 const bodyParts = require("../apiData/bodyParts.json");
 const targetMuscles = require("../apiData/targetMuscles.json");
