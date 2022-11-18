@@ -95,11 +95,14 @@ router.get("/targetMuscles/:targetMuscle", async (req, res) => {
       res.status(200).send(triceps);
     } else if (targetMuscle === "upper back") {
       res.status(200).send(upperback);
+    } else {
+      res.status(500).json({message: "Invalid User Request Params"})
     }
   } catch (err) {
     res
       .status(500)
-      .send("Sorry for the inconvinience, We are under maintainance");
+      .send("Sorry for the inconvinience, We are under maintainance",)
+      .json({Error: err});
   }
 });
 
