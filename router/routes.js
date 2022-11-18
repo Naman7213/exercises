@@ -65,6 +65,9 @@ router.get("/bodyParts/:bodyPart", async (req, res) => {
     } else if (bodyPart === "shoulders") {
       res.status(200).send(shoulders);
     }
+    else {
+      res.status(500).json({message: "Invalid User Request Params"})
+    }
   } catch (err) {
     res
       .status(500)
