@@ -37,7 +37,7 @@ app.get("/", async (req, res) => {
   }
 });
 
-app.get("/bodyParts", async (req, res) => {
+app.get("/bodyparts", async (req, res) => {
   try {
     res.status(200).send(bodyParts);
   } catch (err) {
@@ -47,7 +47,7 @@ app.get("/bodyParts", async (req, res) => {
   }
 });
 
-app.get("/targetMuscles", async (req, res) => {
+app.get("/targetmuscles", async (req, res) => {
   try {
     res.status(200).send(targetMuscles);
   } catch (err) {
@@ -57,7 +57,7 @@ app.get("/targetMuscles", async (req, res) => {
   }
 });
 
-app.get("/bodyParts/:bodyPart", async (req, res) => {
+app.get("/bodyparts/:bodyPart", async (req, res) => {
   const bodyPart = req.params.bodyPart;
   try {
     if (bodyPart === "arms") {
@@ -82,7 +82,7 @@ app.get("/bodyParts/:bodyPart", async (req, res) => {
   }
 });
 
-app.get("/targetMuscles/:targetMuscle", async (req, res) => {
+app.get("/targetmuscles/:targetMuscle", async (req, res) => {
   const targetMuscle = req.params.targetMuscle;
   try {
     if (targetMuscle === "abs") {
